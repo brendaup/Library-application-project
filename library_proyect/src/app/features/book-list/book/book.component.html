@@ -1,26 +1,13 @@
-<!-- <div *ngIf = "bookInfo">
-<img [src]="bookInfo.image" alt="bookInfo.title">
-<div>
-    <p>{{bookInfo.title}}</p>
+<div 
+    *ngIf = "bookInfo"
+    class="container-book"
+>
+    <img [src]="bookInfo.image">
+    <h3>{{bookInfo.title}}</h3>
     <p>{{bookInfo.author}}</p>
     <p>{{bookInfo.price}}</p>
-</div>
-<div>
-    <a [routerLink]="['../book-detail', bookInfo.id]">Ver más info</a>
-</div>
-</div> -->
-
-<div 
-    class="flex-container"
-    *ngIf = "bookInfo"
->
-    <div class="container-list-books">
-            <div class="container-books">
-                <img [src]="bookInfo.image">
-                <h3>{{bookInfo.title}}</h3>
-                <p>{{bookInfo.author}}</p>
-                <p>{{bookInfo.price}}</p>
-                <button>Detalle</button>
-            </div>
+    <div>
+    <a [routerLink]="['../book-detail', bookInfo.id]">Detalle</a>
     </div>
 </div>
+

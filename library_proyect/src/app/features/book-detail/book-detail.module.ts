@@ -15,7 +15,7 @@ import { RouterModule } from '@angular/router';
     CommonModule,
     BookDetailRoutingModule,
     SharedModule,
-    RouterModule
+    RouterModule,
   ],
   exports:[
     BookDetailComponent,

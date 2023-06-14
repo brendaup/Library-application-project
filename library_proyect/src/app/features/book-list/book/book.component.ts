@@ -9,6 +9,11 @@ import { BookI } from 'src/app/core/services/book/book.models';
 })
 export class BookComponent {
 
-  @Input() public bookInfo?: BookI | undefined;
+  @Input() public bookInfo?: BookI;
+
+  
+
+  
+  
   
 }

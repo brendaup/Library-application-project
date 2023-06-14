@@ -12,6 +12,7 @@ import { BookI } from 'src/app/core/services/book/book.models';
 export class BookListComponent implements OnInit {
   //Aquí guardo el listado de libros
   public bookList: BookI[] = [];
+  
   //Guardo subscribe para desuscribirme luego
   public bookSubscription?: Subscription;
 
@@ -21,6 +22,7 @@ export class BookListComponent implements OnInit {
   //Recupero el listado de libros de la API  
     this.bookService.getBooks().subscribe((books: BookI[])=>{
       this.bookList = [...books];
+      console.log(this.bookList)
     });
   }
 

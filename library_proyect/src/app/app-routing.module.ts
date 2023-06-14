@@ -15,12 +15,10 @@ const routes: Routes = [
 },
 {
   path:'book-list',
-  pathMatch: 'prefix',
   loadChildren: ()=> import('src/app/features/book-list/book-list.module').then(m=> m.BookListModule)
 },
 {
   path:'book-detail/:id',
-  pathMatch: 'prefix',
   loadChildren: ()=> import('src/app/features/book-detail/book-detail.module').then(m=> m.BookDetailModule)
 },
 
