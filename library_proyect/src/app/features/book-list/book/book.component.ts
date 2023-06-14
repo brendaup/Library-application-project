@@ -11,9 +11,4 @@ export class BookComponent {
 
   @Input() public bookInfo?: BookI;
 
-  
-
-  
-  
-  
 }

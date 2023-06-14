@@ -1,5 +1,7 @@
-<app-book
-    *ngFor = "let book of bookList"
-    [bookInfo] = "book"
-    
-></app-book>
+<div class="container-app-book">
+    <app-book
+        *ngFor = "let book of bookList"
+        [bookInfo] = "book"
+        class="book-container"
+    ></app-book>
+</div>
