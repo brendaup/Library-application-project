@@ -22,7 +22,6 @@ export class BookListComponent implements OnInit {
   //Recupero el listado de libros de la API  
     this.bookService.getBooks().subscribe((books: BookI[])=>{
       this.bookList = [...books];
-      console.log(this.bookList)
     });
   }
 

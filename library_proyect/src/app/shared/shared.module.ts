@@ -3,19 +3,24 @@ import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { BookFormComponent } from './components/book-form/book-form.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { BookComponent } from './components/book/book.component';
+
 
 
 @NgModule({
   declarations: [
-    BookFormComponent
+    BookFormComponent,
+    BookComponent
   ],
   imports: [
     CommonModule,
     HttpClientModule,
     ReactiveFormsModule,
+    HttpClientModule,
   ],
   exports:[
     BookFormComponent,
+    BookComponent,
   ]
 
 })

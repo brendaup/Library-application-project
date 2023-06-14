@@ -5,14 +5,11 @@ import { BookListComponent } from './book-list.component';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule} from '@angular/router';
-import { BookComponent } from './book/book.component';
-
 
 
 @NgModule({
   declarations: [
     BookListComponent,
-    BookComponent,
 
   ],
   imports: [
