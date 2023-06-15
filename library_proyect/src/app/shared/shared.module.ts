@@ -4,6 +4,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { BookFormComponent } from './components/book-form/book-form.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { BookComponent } from './components/book/book.component';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -14,9 +15,9 @@ import { BookComponent } from './components/book/book.component';
   ],
   imports: [
     CommonModule,
-    HttpClientModule,
     ReactiveFormsModule,
     HttpClientModule,
+    RouterModule,
   ],
   exports:[
     BookFormComponent,

@@ -1,14 +1,14 @@
-<div class="container-book">
-    <div 
-        *ngIf = "bookInfo"
-        class="container-info-book"
-    >
+<div 
+*ngIf ="bookInfo"
+class="container-book">
+    <div class="container-info-book">
         <img [src]="bookInfo.image">
         <h3>{{bookInfo.title}}</h3>
         <p>{{bookInfo.author}}</p>
         <p>{{bookInfo.price}}</p>
         <div>
-        <a [routerLink]="['../features/book-detail', bookInfo.id]">Detalle</a>
+          <a [routerLink]="['../book-detail', bookInfo.id]">Detalle</a>
         </div>
     </div>
 </div>
+ 

@@ -1,20 +1,39 @@
 <div class="container-form">
-<form>
-    <label for="titulo">Título:</label>
-    <input type="text" id="titulo" name="titulo" required><br><br>
-    
-    <label for="autor">Autor:</label>
-    <input type="text" id="autor" name="autor" required><br><br>
-    
-    <label for="imagen">Imagen:</label>
-    <input type="text" id="imagen" name="imagen" required><br><br>
-    
-    <label for="genero">Género:</label>
-    <input type="text" id="genero" name="genero" required><br><br>
-    
-    <label for="sinopsis">Sinopsis:</label><br>
-    <textarea id="sinopsis" name="sinopsis" rows="4" cols="50" required></textarea><br><br>
-    
+<form 
+  *ngIf = "bookForm"
+  [formGroup]="bookForm"
+
+  > 
+    <div>
+      <label for="title">Título:</label>
+      <input formControlName="title" type="text"><br><br>
+    </div>
+
+    <div>
+      <label for="author">Autor:</label>
+      <input formControlName="author" type="text" ><br><br>
+    </div>
+
+    <div>
+      <label for="image">Portada:</label>
+      <input formControlName="image" type="text" ><br><br>
+    </div>
+
+    <div>
+      <label for="genre">Género:</label>
+      <select formControlName="genre" type="text" > 
+        <option 
+          *ngFor = "let genre of genreOptions"
+          [value] = "genre"
+          > {{genre}} </option>
+
+      </select><br><br>
+    </div>
+
+    <div>
+      <label for="synopsis">Sinopsis:</label><br>
+      <textarea formControlName="synopsis" id="sinopsis" name="sinopsis" rows="4" cols="50"></textarea><br><br>
+      </div>
     <input type="submit" value="Crear Libro">
   </form>
 </div>

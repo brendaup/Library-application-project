@@ -25,8 +25,16 @@ const routes: Routes = [
   loadChildren: ()=> import('src/app/features/create-book/create-book.module').then(m=> m.CreateBookModule)
 },
 {
+  path:'edit-book',
+  loadChildren: ()=> import('src/app/features/edit-book/edit-book.module').then(m=> m.EditBookModule)
+},
+{
   path:'my-creations',
   loadChildren: ()=> import('src/app/features/my-creations/my-creations.module').then(m=> m.MyCreationsModule)
+},
+{
+  path:'about',
+  loadChildren: ()=> import('src/app/features/about/about.module').then(m=> m.AboutModule)
 },
 
 ];

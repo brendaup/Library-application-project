@@ -44,7 +44,7 @@ textarea {
   border-radius: 3px;
   margin-bottom: 15px;
   background-color: lighten($color-primario, 30%);
-  color: #fff;
+  color: black;
   margin-right: 5px;
 }
 
@@ -74,4 +74,24 @@ textarea {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 15px;
+}
+
+select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid $color-borde;
+  border-radius: 3px;
+  margin-bottom: 15px;
+  background-color: lighten($color-primario, 30%);
+  color: black;
+  margin-right: 5px;
+}
+
+select:hover {
+  background-color: lighten($color-primario, 20%);
+}
+
+select:focus {
+  outline: none;
+  background-color: $color-primario;
 }

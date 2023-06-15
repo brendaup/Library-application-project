@@ -1,8 +1,15 @@
 <div 
-    *ngIf="book"
-    class="container-book-detail"
-    >
-        <img [src]="book.image" alt={{book.title}}>
-        <p>Género: {{book.genre}}</p>
-        <p>Año publicación:{{book.year}}</p>
+*ngIf="book"
+ class="container-book-detail"
+>
+    <img [src]="book.image" alt={{book.title}}>
+    <p>Género: {{book.genre}}</p>
+    <p>Año publicación:{{book.year}}</p>
+    <p>Sinopsis: {{book.synopsis}}</p>
+
+
 </div>
+
+
+
+
