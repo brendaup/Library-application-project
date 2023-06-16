@@ -7,6 +7,7 @@ export interface BookI{
     year: number;
     image: string;
     synopsis: string;
+    createbyme?: boolean;
 }
 
 export type genReType = "Novela romántica"

@@ -1,7 +1,24 @@
 .footer {
-    background-color: #f8f8f8;
+  height: 50px;  
+  position: sticky;
+  bottom: 0;
+  background-color: #f8f8f8;
     padding: 20px 0;
     text-align: center;
+    
+    .social-icons {
+      display: flex;
+      align-items: center;
+      
+      a {
+        margin-right: 10px;
+        
+        img {
+          width: 30px;
+          height: 30px;
+        }
+      }
+    }
   }
   
   .container {
@@ -19,6 +36,7 @@
   
   .social-icons {
     margin-top: 10px;
+    justify-content: center;
   }
   
   .social-icons a {

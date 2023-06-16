@@ -29,7 +29,7 @@ const routes: Routes = [
   loadChildren: ()=> import('src/app/features/edit-book/edit-book.module').then(m=> m.EditBookModule)
 },
 {
-  path:'my-creations/:id',
+  path:'my-creations',
   loadChildren: ()=> import('src/app/features/my-creations/my-creations.module').then(m=> m.MyCreationsModule)
 },
 {

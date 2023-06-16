@@ -33,7 +33,7 @@ export class BookListComponent implements OnInit {
 
   private getBooks(){
     this.bookService.getBooks().subscribe((books: BookI[])=>{
-      this.bookList = books;
+      this.bookList = books
     });
   }
   

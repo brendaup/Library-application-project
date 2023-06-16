@@ -12,8 +12,9 @@ import { BookI, genReType } from 'src/app/core/services/book/book.models'
   styleUrls: ['./book-form.component.scss']
 })
 export class BookFormComponent implements OnInit {
-//Con este input indico si me llega algún libro para ver si tengo que crear o editar. Si me llega un libro edito y si no creo
+
  @Input() public book?: BookI;
+
   public bookForm?: FormGroup;
   public genreOptions: genReType [] = GENRE_TYPE;
   public bookSubscription?: Subscription;
@@ -35,14 +36,16 @@ export class BookFormComponent implements OnInit {
     }) 
   }
 
+
    public createBook() {
     if(this.bookForm?.valid){
+      const myCreasionBook = {...this.bookForm.value, createbyme: true}
       const bookRequest = this.book
       ? this.bookService.editBook(this.book.id, this.bookForm.value)
-      : this.bookService.createBook(this.bookForm.value);
+      : this.bookService.createBook(myCreasionBook);
       bookRequest.subscribe((book: BookI)=>{
         this.bookForm?.reset();
-        this.router.navigateByUrl('book-list')
+        this.router.navigateByUrl('my-creations')
       })
     }
   } 
