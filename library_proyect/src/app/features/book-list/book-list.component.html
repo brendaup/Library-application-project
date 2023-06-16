@@ -1,7 +1,13 @@
+<div class="container-filter">
+    <input [(ngModel)]="filterValue">
+</div>
+
+
 <div class="container-app-book">
     <app-book
-        *ngFor = "let book of bookList"
+        *ngFor = "let book of bookList | filter:filterValue"
         [bookInfo]="book"
         class="book-container"
+        (onDeleteBook)="deleteBook(book)"
     ></app-book>
 </div>

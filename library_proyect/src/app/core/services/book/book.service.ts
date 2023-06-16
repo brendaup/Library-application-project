@@ -1,4 +1,4 @@
-import { Observable } from 'rxjs';
+import { Observable, pipe, tap } from 'rxjs';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { BookI } from './book.models';
@@ -9,6 +9,7 @@ import { BookI } from './book.models';
 export class BookService {
 
   public baseUrl: string = 'https://64809ab9f061e6ec4d498f44.mockapi.io'
+  public bookListCreated: BookI[] = [];
 
   constructor(
     private http: HttpClient
@@ -22,7 +23,23 @@ export class BookService {
   public getBooksById(id:string): Observable<BookI>{
     return this.http.get<BookI>(`${this.baseUrl}/books/${id}`);
   }
-
+  //POST
+  public createBook(book: BookI): Observable<BookI>{
+    return this.http.post<BookI>(`${this.baseUrl}/books`, book).pipe(
+      tap((createdBook: BookI)=>{
+        this.bookListCreated.push(createdBook)
+      })
+    );
+    
+  }
+  //PUT
+  public editBook(id:string, body:BookI): Observable<BookI>{
+    return this.http.put<BookI>(`${this.baseUrl}/books/${id}`, body)
+  }
+ //DELETE
+ public deleteBook(id:string): Observable<BookI>{
+  return this.http.delete<BookI>(`${this.baseUrl}/books/${id}`)
+}
 
 
 

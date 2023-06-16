@@ -1,4 +1,8 @@
 import { Component } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { BookI } from 'src/app/core/services/book/book.models';
+import { BookService } from 'src/app/core/services/book/book.service';
+
 
 @Component({
   selector: 'app-edit-book',
@@ -6,5 +10,24 @@ import { Component } from '@angular/core';
   styleUrls: ['./edit-book.component.scss']
 })
 export class EditBookComponent {
+
+  public book?: BookI;
+
+ /*  public bookSubscription?: Subscription; */
+
+  constructor(
+    private activatedRoute: ActivatedRoute,
+    private bookService:BookService,
+  ){
+    this.activatedRoute.params.subscribe((params)=>{
+      const bookId = params['id'];
+
+    this.bookService.getBooksById(bookId).subscribe((book: BookI)=>{
+      this.book = book;
+    });
+  })
+  }
+      
+
 
 }

@@ -5,13 +5,16 @@ import { BookFormComponent } from './components/book-form/book-form.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { BookComponent } from './components/book/book.component';
 import { RouterModule } from '@angular/router';
+import { FilterPipe } from './pipes/filter.pipe';
+
 
 
 
 @NgModule({
   declarations: [
     BookFormComponent,
-    BookComponent
+    BookComponent,
+    FilterPipe
   ],
   imports: [
     CommonModule,
@@ -22,6 +25,7 @@ import { RouterModule } from '@angular/router';
   exports:[
     BookFormComponent,
     BookComponent,
+    FilterPipe
   ]
 
 })

@@ -12,9 +12,9 @@ import { Subscription } from 'rxjs';
 })
 export class BookDetailComponent{
 
-  public book?: BookI | undefined;
-  public booksList: BookI[] = [];
-  public bookSubscription?: Subscription;
+  public book?: BookI;
+
+ /*  public bookSubscription?: Subscription; */
 
   constructor(
     private activatedRoute: ActivatedRoute,
@@ -23,21 +23,11 @@ export class BookDetailComponent{
     this.activatedRoute.params.subscribe((params)=>{
       const bookId = params['id'];
 
-    this.bookService.getBooks().subscribe((books: BookI[])=>{
-      this.booksList = books;
-      
-      this.book = this.booksList.find(book => book.id === bookId)
-      console.log(this.book)
+    this.bookService.getBooksById(bookId).subscribe((book: BookI)=>{
+      this.book = book;
     });
-    })
-  }
-      
-
-      
-    public OnDestroy(): void{
-      this.bookSubscription?.unsubscribe();
-    }
-  }
+  })
+  }}
     
   
  

@@ -17,6 +17,7 @@ import { SharedModule } from 'src/app/shared/shared.module';
     MyCreationsRoutingModule,
     RouterModule,
     SharedModule,
+    
   ],
   exports:[
     MyCreationsComponent

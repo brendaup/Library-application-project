@@ -1,12 +1,41 @@
-.container-app-book{
+.container-filter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .input-style {
+    width: 300px;
+    height: 40px;
+    padding: 10px;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    background-color: transparent;
+    font-size: 16px;
+    color: #333;
+    outline: none;
+    transition: border-color 0.3s ease-in-out;
+  
+    &:focus {
+      border-color: dodgerblue;
+    }
+  }
+  
+  .input-style::placeholder {
+    color: #999;
+  }
+  
+  .input-style:focus::placeholder {
+    color: #ccc;
+  }
+  
+  .container-app-book {
     display: flex;
     flex-wrap: wrap;
-    margin-top: 100px;
-}
-
-.book-container{
-    width: 500px;
-    height: 500px;
-    display: flex;
-    flex-wrap: wrap;
-}
+    justify-content: center;
+  }
+  
+  .book-container {
+    margin: 10px;
+  }

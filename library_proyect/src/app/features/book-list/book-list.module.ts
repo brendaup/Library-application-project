@@ -5,6 +5,7 @@ import { BookListComponent } from './book-list.component';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule} from '@angular/router';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { RouterModule} from '@angular/router';
     BookListRoutingModule,
     SharedModule,
     HttpClientModule,
-    RouterModule
+    RouterModule,
+    FormsModule
   ],
   exports: [
     BookListComponent,

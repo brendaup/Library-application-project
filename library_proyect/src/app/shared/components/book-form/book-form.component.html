@@ -2,38 +2,63 @@
 <form 
   *ngIf = "bookForm"
   [formGroup]="bookForm"
+  (submit)="createBook()"
 
   > 
     <div>
-      <label for="title">Título:</label>
+      <label>Título:</label>
       <input formControlName="title" type="text"><br><br>
+      <p *ngIf="!bookForm.get('title')?.valid
+          && (bookForm.get('title')?.dirty || bookForm.get('title')?.touched)"
+        >Campo requerido</p>
     </div>
 
     <div>
-      <label for="author">Autor:</label>
+      <label>Autor:</label>
       <input formControlName="author" type="text" ><br><br>
+      <p *ngIf="!bookForm.get('author')?.valid
+          && (bookForm.get('author')?.dirty || bookForm.get('author')?.touched)"
+        >Campo requerido</p>
     </div>
 
     <div>
-      <label for="image">Portada:</label>
+      <label>Portada:</label>
       <input formControlName="image" type="text" ><br><br>
+      <p *ngIf="!bookForm.get('image')?.valid
+      && (bookForm.get('image')?.dirty || bookForm.get('image')?.touched)"
+    >Campo requerido</p>
     </div>
 
     <div>
-      <label for="genre">Género:</label>
+      <label>Género:</label>
       <select formControlName="genre" type="text" > 
         <option 
           *ngFor = "let genre of genreOptions"
           [value] = "genre"
           > {{genre}} </option>
-
       </select><br><br>
+      <p *ngIf="!bookForm.get('genre')?.valid
+      && (bookForm.get('genre')?.dirty || bookForm.get('genre')?.touched)"
+    >Campo requerido</p>
+    </div>
+    
+    <div>
+      <label>Año publicación:</label>
+      <input formControlName="year" type="text" ><br><br>
+      <p *ngIf="!bookForm.get('year')?.valid
+      && (bookForm.get('year')?.dirty || bookForm.get('year')?.touched)"
+    >Campo requerido</p>
     </div>
 
+
     <div>
-      <label for="synopsis">Sinopsis:</label><br>
-      <textarea formControlName="synopsis" id="sinopsis" name="sinopsis" rows="4" cols="50"></textarea><br><br>
-      </div>
-    <input type="submit" value="Crear Libro">
+      <label>Sinopsis:</label><br>
+      <textarea formControlName="synopsis" rows="4" cols="50"></textarea><br><br>
+      <p *ngIf="!bookForm.get('synopsis')?.valid
+      && (bookForm.get('synopsis')?.dirty || bookForm.get('synopsis')?.touched)"
+    >Campo requerido</p>        
+    </div>
+    <button type="submit"> {{ book ? 'Editar libro' : 'Crear Libro'}}</button> 
   </form>
 </div>
+
