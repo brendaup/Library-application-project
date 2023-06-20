@@ -1,9 +1,8 @@
 .footer {
-  height: 50px;  
-  position: sticky;
-  bottom: 0;
-  background-color: #f8f8f8;
+  height: 50px; 
+  background-color: rgb(245, 245, 245);
     padding: 20px 0;
+    border-radius: 20px;
     text-align: center;
     
     .social-icons {
@@ -37,15 +36,12 @@
   .social-icons {
     margin-top: 10px;
     justify-content: center;
+   
   }
-  
-  .social-icons a {
-    display: inline-block;
-    color: #333;
-    margin-right: 10px;
-    font-size: 20px;
-  }
-  
-  .social-icons a:hover {
-    color: #28a745;
-  }
+
+  .icon {
+    width: 30px; /* Ajusta el tamaño de acuerdo a tus preferencias */
+    height: 30px; /* Ajusta el tamaño de acuerdo a tus preferencias */
+    margin: 0 10px; /* Ajusta el margen entre los iconos de acuerdo a tus preferencias */
+}
+

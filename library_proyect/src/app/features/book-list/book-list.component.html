@@ -1,10 +1,15 @@
 <div class="container-filter">
-  <input [(ngModel)]="filterValue" />
+  <input [(ngModel)]="filterValue" class="search-input" placeholder="Buscar libros..." />
+
+<select [(ngModel)] = "orderCriteria" class="order-select">
+  <option value="asc">A-Z</option>
+  <option value="desc">Z-A</option>
+</select>
 </div>
 
 <div class="container-app-book">
   <app-book
-    *ngFor="let book of bookList | filter : filterValue"
+    *ngFor="let book of bookList | filter : filterValue | order: orderCriteria"
     [bookInfo]="book"
     class="book-container"
     (OnDeleteBook)="deleteBook(book)"

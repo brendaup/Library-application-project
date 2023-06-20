@@ -1,7 +1,7 @@
 import { BookService } from './../../core/services/book/book.service';
 import { Component, OnInit, OnDestroy,Input, EventEmitter } from '@angular/core';
 import { Subscription } from 'rxjs';
-import { BookI } from 'src/app/core/services/book/book.models';
+import { BookI, OrderCriteria } from 'src/app/core/services/book/book.models';
 
 
 @Component({
@@ -13,7 +13,7 @@ export class BookListComponent implements OnInit {
   //Aquí guardo el listado de libros
   public bookList: BookI[] = [];
   public filterValue: string = "";
- 
+  public orderCriteria?: OrderCriteria ; 
   
   //Guardo subscribe para desuscribirme luego
   public bookSubscription?: Subscription;

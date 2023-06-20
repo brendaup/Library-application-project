@@ -21,3 +21,5 @@ export type genReType = "Novela romántica"
 | "Fantasía"
 | "Novela Histórica"
 | "Narrativa extranjera"
+
+export type OrderCriteria = "asc" | "desc"

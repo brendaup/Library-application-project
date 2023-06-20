@@ -5,7 +5,8 @@ import { BookFormComponent } from './components/book-form/book-form.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { BookComponent } from './components/book/book.component';
 import { RouterModule } from '@angular/router';
-import { FilterPipe } from './pipes/filter.pipe';
+import { FilterPipe } from './pipes/filter/filter.pipe';
+import { OrderPipe } from './pipes/order/order.pipe';
 
 
 
@@ -14,7 +15,8 @@ import { FilterPipe } from './pipes/filter.pipe';
   declarations: [
     BookFormComponent,
     BookComponent,
-    FilterPipe
+    FilterPipe,
+    OrderPipe
   ],
   imports: [
     CommonModule,
@@ -25,7 +27,8 @@ import { FilterPipe } from './pipes/filter.pipe';
   exports:[
     BookFormComponent,
     BookComponent,
-    FilterPipe
+    FilterPipe,
+    OrderPipe,
   ]
 
 })

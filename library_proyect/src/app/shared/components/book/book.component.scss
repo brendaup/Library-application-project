@@ -1,6 +1,3 @@
-
-
-
 .container-info-book{
     width: 300px;
     height: 500px;
@@ -10,10 +7,45 @@
     margin-bottom: 10px;
     text-align: center;  
 
-    
     img{
         width: 250px;
         height: 350px;
         
     }
-} 
+}  
+
+.button-container {
+    margin-top: 10px;
+    text-align: center;
+  }
+  
+  .btn {
+    display: inline-block;
+    vertical-align: middle; /* Alinea verticalmente los botones */
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-details {
+    background-color: #dfecc9;
+    color: black;
+  }
+  
+  .btn-edit {
+    background-color: #cedf9f;
+    color: black;
+    margin-left: 10px;
+  }
+  
+  .btn-delete {
+    background-color: #F44336;
+    color: black;
+    margin-left: 10px;
+  }

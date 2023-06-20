@@ -9,6 +9,7 @@ import { BookI } from 'src/app/core/services/book/book.models'
 })
 export class BookComponent{
 
+  public euroSymbol = '€'
   @Input() public bookInfo?: BookI; 
 
   @Output() public OnDeleteBook: EventEmitter<BookI> = new EventEmitter()
