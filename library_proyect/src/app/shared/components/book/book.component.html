@@ -1,16 +1,17 @@
-<div 
-*ngIf ="bookInfo"
-class="container-book">
-    <div class="container-info-book">
-        <img [src]="bookInfo.image">
-        <h3 class="book-title">{{bookInfo.title}}</h3>
-        <p class="book-author">{{bookInfo.author}}</p>
-        <p class="book-price euro-symbol">{{bookInfo.price}} {{euroSymbol}}</p>
-        <div class="button-container">
-          <a [routerLink]="['../book-detail', bookInfo.id]" class="btn btn-details">Detalle</a>
-          <a [routerLink]="['../edit-book', bookInfo.id]" class="btn btn-edit">Editar</a>
-          <button (click)="deleteBook()" class="btn btn-delete">Eliminar</button>
-        </div>
+<div *ngIf="bookInfo" class="container-book">
+  <div class="container-info-book">
+    <img [src]="bookInfo.image" />
+    <h3 class="book-title">{{ bookInfo.title }}</h3>
+    <p class="book-author">{{ bookInfo.author }}</p>
+    <p class="book-price euro-symbol">{{ bookInfo.price }} {{ euroSymbol }}</p>
+    <div class="button-container">
+      <a [routerLink]="['../book-detail', bookInfo.id]" class="btn btn-details"
+        >Detalle</a
+      >
+      <a [routerLink]="['../edit-book', bookInfo.id]" class="btn btn-edit"
+        >Editar</a
+      >
+      <button (click)="deleteBook()" class="btn btn-delete">Eliminar</button>
     </div>
+  </div>
 </div>
- 

@@ -1,51 +1,66 @@
-.container-info-book{
-    width: 300px;
-    height: 500px;
-    padding: 10px;
-    box-sizing: border-box;
-    padding: 10px;
-    margin-bottom: 10px;
-    text-align: center;  
+$color-fondo: #f5f5f5;
 
-    img{
-        width: 250px;
-        height: 350px;
-        
-    }
-}  
+.container {
+  min-height: 100vh; /* Establece la altura mínima al 100% de la ventana visible */
+  display: flex;
+  flex-direction: column;
+}
+
+.container-book {
+  background-color: $color-fondo;
+  flex: 1; /* Hace que el contenedor se expanda y ocupe todo el espacio vertical disponible */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container-info-book {
+  width: 300px;
+  height: 500px;
+  padding: 10px;
+  box-sizing: border-box;
+  padding: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+  
+  img {
+    width: 250px;
+    height: 350px;
+  }
+}
 
 .button-container {
-    margin-top: 10px;
-    text-align: center;
-  }
-  
-  .btn {
-    display: inline-block;
-    vertical-align: middle; /* Alinea verticalmente los botones */
-    padding: 8px 16px;
-    font-size: 14px;
-    font-weight: bold;
-    text-decoration: none;
-    text-align: center;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .btn-details {
-    background-color: #dfecc9;
-    color: black;
-  }
-  
-  .btn-edit {
-    background-color: #cedf9f;
-    color: black;
-    margin-left: 10px;
-  }
-  
-  .btn-delete {
-    background-color: #F44336;
-    color: black;
-    margin-left: 10px;
-  }
+  margin-top: 10px;
+  text-align: center;
+}
+
+.btn {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: bold;
+  text-decoration: none;
+  text-align: center;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-details {
+  background-color: #5f917f;
+  color: black;
+}
+
+.btn-edit {
+  background-color: #d0b48a;
+  color: black;
+  margin-left: 10px;
+}
+
+.btn-delete {
+  background-color: #c9736d;
+  color: black;
+  margin-left: 10px;
+}

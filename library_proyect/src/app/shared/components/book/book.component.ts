@@ -17,6 +17,4 @@ export class BookComponent{
   public deleteBook(){
    this.OnDeleteBook.emit(this.bookInfo)
   }
-
-
 }
