@@ -36,6 +36,10 @@ const routes: Routes = [
   path:'about',
   loadChildren: ()=> import('src/app/features/about/about.module').then(m=> m.AboutModule)
 },
+{
+  path:'**',
+  loadChildren: ()=> import('src/app/features/not-found/not-found.module').then(m=> m.NotFoundModule)
+},
 
 ];
 

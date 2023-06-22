@@ -1,0 +1,41 @@
+$color-primario: #d0b48a; 
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  .title {
+    font-size: 30px;
+    padding: 10px;
+  }
+  
+  .image {
+    width: 200px;
+    height: auto;
+  }
+  
+  .message {
+    font-size: 18px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .btn {
+    background-color: $color-primario;
+    font-family: Arial, sans-serif;
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+  
+    &:hover {
+      background-color: darken($color-primario, 10%);
+    }
+  }
+

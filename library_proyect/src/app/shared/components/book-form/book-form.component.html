@@ -50,6 +50,13 @@
     >Campo requerido</p>
     </div>
 
+    <div>
+      <label>Precio:</label>
+      <input formControlName="price" type="text" ><br><br>
+      <p *ngIf="!bookForm.get('price')?.valid
+      && (bookForm.get('price')?.dirty || bookForm.get('price')?.touched)"
+    >Campo requerido</p>
+    </div>
 
     <div>
       <label>Sinopsis:</label><br>

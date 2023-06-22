@@ -33,19 +33,25 @@ export class BookFormComponent implements OnInit {
       year: new FormControl (this.book?.year || "", [Validators.required]),
       image: new FormControl (this.book?.image || "", [Validators.required]),
       synopsis: new FormControl (this.book?.synopsis || "", [Validators.required]),
+      price: new FormControl (this.book?.price || "", [Validators.required]),
     }) 
   }
 
 
    public createBook() {
     if(this.bookForm?.valid){
-      const myCreasionBook = {...this.bookForm.value, createbyme: true}
+      const myCreationBook = {...this.bookForm.value, createbyme: true}
       const bookRequest = this.book
       ? this.bookService.editBook(this.book.id, this.bookForm.value)
-      : this.bookService.createBook(myCreasionBook);
+      : this.bookService.createBook(myCreationBook);
       bookRequest.subscribe((book: BookI)=>{
         this.bookForm?.reset();
-        this.router.navigateByUrl('my-creations')
+        if(this.book){
+          this.router.navigateByUrl('book-list')
+        } else {
+          this.router.navigateByUrl('my-creations')
+        }
+        
       })
     }
   } 
