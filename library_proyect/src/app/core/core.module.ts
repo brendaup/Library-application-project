@@ -4,6 +4,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from '../app-routing.module';
+import { LoadingComponent } from './components/loading/loading.component';
 
 
 
@@ -11,6 +12,7 @@ import { AppRoutingModule } from '../app-routing.module';
   declarations: [
     HeaderComponent,
     FooterComponent,
+    LoadingComponent,
   ],
   imports: [
     CommonModule,
@@ -20,6 +22,7 @@ import { AppRoutingModule } from '../app-routing.module';
   exports:[
     HeaderComponent,
     FooterComponent,
+    LoadingComponent,
   ]
 
 })

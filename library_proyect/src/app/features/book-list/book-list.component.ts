@@ -1,3 +1,4 @@
+import { LoadingService } from './../../core/services/loading/loading.service';
 import { BookService } from './../../core/services/book/book.service';
 import {
   Component,
@@ -21,7 +22,10 @@ export class BookListComponent implements OnInit {
 
   public bookSubscription?: Subscription;
 
-  constructor(private bookService: BookService) {}
+  constructor(
+    private bookService: BookService,
+    private loadingService: LoadingService
+    ) {}
 
   public ngOnInit(): void {
     this.getBooks();
@@ -35,6 +39,7 @@ export class BookListComponent implements OnInit {
 
   private getBooks() {
     this.bookService.getBooks().subscribe((books: BookI[]) => {
+      setTimeout(()=> this.loadingService.hideLoading(),3000)
       this.bookList = books;
     });
   }

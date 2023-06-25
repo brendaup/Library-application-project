@@ -31,8 +31,8 @@ export class BookDetailComponent {
         switchMap((book: BookI)=>{
           return this.authorService.getAuthorById(book.author);
         })
-      ).subscribe((author: AuthorI)=>{
-        this.bookAuthor = author;
+      ).subscribe((author: AuthorI[])=>{
+        this.bookAuthor = author[0];
       })
     });
   }

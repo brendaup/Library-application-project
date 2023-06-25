@@ -1,11 +1,13 @@
 <div *ngIf="book" class="container-book-detail">
   <img [src]="book.image" alt="{{ book.title }}" />
-<h2 *ngIf="!bookAuthor">{{book.author}}</h2>
-<div *ngIf="bookAuthor">
-    <h1>Autor: {{bookAuthor.name}}</h1>
-    <p>Ciudad: {{bookAuthor.city}}</p>
-</div>
+
   <div>
+    <h2 *ngIf="!bookAuthor">{{ book.author }}</h2>
+    <div *ngIf="bookAuthor">
+      <h1>Autor: {{ bookAuthor.name }}</h1>
+      <p>Ciudad: {{ bookAuthor.city }}</p>
+    </div>
+
     <p>Género: {{ book.genre }}</p>
     <p>Año publicación:{{ book.year }}</p>
     <p>Sinopsis: {{ book.synopsis }}</p>
